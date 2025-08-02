@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSL Checker & Domain Tools</title>
+    <meta name="description" content="Professional SSL certificate checker and 20+ essential SSL/TLS security tools. Check SSL certificates, generate CSR, decode certificates, and more.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- HOME PAGE -->
+        <div id="home" class="page active">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                        <div>
+                <div class="hero-badge">
+                                <span>🚀</span>
+                                <span>Professional SSL Tools Suite</span>
+                </div>
+                <h1 class="hero-title">
+                                <span class="gradient-text">SSL Checker Pro</span><br>
+                                20+ Essential SSL & Security Tools
+                </h1>
+                <p class="hero-description">
+                    Professional-grade SSL certificate checker and comprehensive security toolkit. 
+                    Validate certificates, generate CSRs, decode certificates, and ensure your website's security.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">SSL Tools</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Free</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Available</div>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                                <div class="btn btn-primary" onclick="scrollToTools()">
+                                    <span>🔍</span>
+                                    <span>Start Checking SSL</span>
+                </div>
+                                <div class="btn btn-secondary" onclick="showPage('blog')">
+                                    <span>📖</span>
+                                    <span>Learn More</span>
+            </div>
+                            </div>
+                        </div>
+                        <div>
+                <div class="ssl-demo-card">
+                    <div class="demo-header">
+                        <div class="demo-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="demo-title">SSL Certificate Check</div>
+                    </div>
+                    <div class="demo-content">
+                        <div class="demo-input">
+                                        <span>🔒</span>
+                                        <span>sslcheckerpro.com</span>
+                        </div>
+                        <div class="demo-results">
+                                        <div class="demo-result">
+                                            <span>✅</span>
+                                            <span>Valid Certificate</span>
+                            </div>
+                            <div class="demo-result">
+                                            <span>📅</span>
+                                            <span>Expires: Dec 2026</span>
+                            </div>
+                            <div class="demo-result">
+                                            <span>🏢</span>
+                                            <span>Issuer: Let's Encrypt</span>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- Tools Section -->
+    <section class="tools-section" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="gradient-text">Complete SSL Toolkit</span>
+                </h2>
+                <p class="section-description">
+                    20+ professional-grade SSL and security tools to secure and validate your websites
+                </p>
+            </div>
+            <div class="tools-grid">
+                        <!-- SSL Certificate Checker -->
+                        <div class="tool-card featured" onclick="showTool('ssl-checker')">
+                    <div class="tool-icon">🔍</div>
+                    <h3 class="tool-title">SSL Certificate Checker</h3>
+                            <p class="tool-description">Comprehensive SSL certificate validation and analysis with detailed reports</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Certificate Details</span>
+                        <span class="feature-tag">Chain Validation</span>
+                        <span class="feature-tag">Server Info</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Check SSL Certificate</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- CSR Generator -->
+                        <div class="tool-card" onclick="showTool('csr-generator')">
+                    <div class="tool-icon">📝</div>
+                    <h3 class="tool-title">CSR Generator</h3>
+                    <p class="tool-description">Generate Certificate Signing Requests with private keys</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">2048/4096 bit</span>
+                        <span class="feature-tag">Multiple SANs</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Generate CSR</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- SSL Expiry Checker -->
+                        <div class="tool-card" onclick="showTool('ssl-expiry-checker')">
+                    <div class="tool-icon">⏰</div>
+                    <h3 class="tool-title">SSL Expiry Checker</h3>
+                    <p class="tool-description">Monitor SSL certificate expiration dates</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Expiry Alerts</span>
+                        <span class="feature-tag">Bulk Check</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Check Expiry</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- Certificate Decoder -->
+                        <div class="tool-card" onclick="showTool('certificate-decoder')">
+                    <div class="tool-icon">🔓</div>
+                    <h3 class="tool-title">Certificate Decoder</h3>
+                    <p class="tool-description">Decode and analyze X.509 certificates</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">PEM/DER</span>
+                        <span class="feature-tag">Full Details</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Decode Certificate</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- CSR Decoder -->
+                        <div class="tool-card" onclick="showTool('csr-decoder')">
+                    <div class="tool-icon">🔍</div>
+                    <h3 class="tool-title">CSR Decoder</h3>
+                    <p class="tool-description">Decode Certificate Signing Requests</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Subject Info</span>
+                        <span class="feature-tag">Key Details</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Decode CSR</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- Private Key Matcher -->
+                        <div class="tool-card" onclick="showTool('private-key-matcher')">
+                    <div class="tool-icon">🔑</div>
+                    <h3 class="tool-title">Private Key Matcher</h3>
+                    <p class="tool-description">Verify certificate and private key pairs</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Hash Match</span>
+                        <span class="feature-tag">Validation</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Match Keys</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- Domain Expiry Checker -->
+                        <div class="tool-card" onclick="showTool('domain-expiry-checker')">
+                    <div class="tool-icon">🌐</div>
+                    <h3 class="tool-title">Domain Expiry Checker</h3>
+                    <p class="tool-description">Check domain registration expiration</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">WHOIS Data</span>
+                        <span class="feature-tag">Registrar Info</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Check Domain</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- HTTPS Redirect Checker -->
+                        <div class="tool-card" onclick="showTool('https-redirect-checker')">
+                    <div class="tool-icon">🔄</div>
+                    <h3 class="tool-title">HTTPS Redirect Checker</h3>
+                    <p class="tool-description">Verify HTTP to HTTPS redirects</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Redirect Chain</span>
+                        <span class="feature-tag">Status Codes</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Check Redirects</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- Port 443 Test -->
+                        <div class="tool-card" onclick="showTool('port-443-test')">
+                    <div class="tool-icon">🔌</div>
+                    <h3 class="tool-title">Port 443 Test</h3>
+                    <p class="tool-description">Test SSL port connectivity</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Connection Test</span>
+                        <span class="feature-tag">Response Time</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Test Port</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- Certificate Fingerprint -->
+                        <div class="tool-card" onclick="showTool('certificate-fingerprint')">
+                    <div class="tool-icon">👆</div>
+                    <h3 class="tool-title">Certificate Fingerprint</h3>
+                    <p class="tool-description">Generate certificate fingerprints</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">SHA256</span>
+                        <span class="feature-tag">SHA1/MD5</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Get Fingerprint</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- SSL Chain Checker -->
+                        <div class="tool-card" onclick="showTool('ssl-chain-checker')">
+                    <div class="tool-icon">🔗</div>
+                    <h3 class="tool-title">SSL Chain Checker</h3>
+                    <p class="tool-description">Validate SSL certificate chains</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Chain Analysis</span>
+                        <span class="feature-tag">Root CA</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Check Chain</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- SSL Vulnerability Scanner -->
+                        <div class="tool-card" onclick="showTool('ssl-vulnerability-scanner')">
+                    <div class="tool-icon">🛡️</div>
+                    <h3 class="tool-title">SSL Vulnerability Scanner</h3>
+                    <p class="tool-description">Scan for SSL/TLS vulnerabilities</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Security Scan</span>
+                        <span class="feature-tag">Threat Detection</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Scan Vulnerabilities</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- Certificate SAN Checker -->
+                        <div class="tool-card" onclick="showTool('certificate-san-checker')">
+                    <div class="tool-icon">📋</div>
+                    <h3 class="tool-title">Certificate SAN Checker</h3>
+                    <p class="tool-description">Check Subject Alternative Names</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">SAN List</span>
+                        <span class="feature-tag">Wildcard Check</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Check SANs</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- PEM to DER Converter -->
+                        <div class="tool-card" onclick="showTool('pem-to-der-converter')">
+                    <div class="tool-icon">🔄</div>
+                    <h3 class="tool-title">PEM to DER Converter</h3>
+                    <p class="tool-description">Convert PEM certificates to DER format</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Format Convert</span>
+                        <span class="feature-tag">Download</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Convert PEM</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- DER to PEM Converter -->
+                        <div class="tool-card" onclick="showTool('der-to-pem-converter')">
+                    <div class="tool-icon">🔄</div>
+                    <h3 class="tool-title">DER to PEM Converter</h3>
+                    <p class="tool-description">Convert DER certificates to PEM format</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Format Convert</span>
+                        <span class="feature-tag">Download</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Convert DER</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- PFX to PEM Converter -->
+                        <div class="tool-card" onclick="showTool('pfx-to-pem-converter')">
+                    <div class="tool-icon">📦</div>
+                    <h3 class="tool-title">PFX to PEM Converter</h3>
+                    <p class="tool-description">Extract certificates from PFX files</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">PFX Extract</span>
+                        <span class="feature-tag">Password Support</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Convert PFX</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- SSL Protocol Support -->
+                        <div class="tool-card" onclick="showTool('ssl-protocol-support')">
+                    <div class="tool-icon">🔧</div>
+                    <h3 class="tool-title">SSL Protocol Support</h3>
+                    <p class="tool-description">Check supported SSL/TLS protocols</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">TLS Versions</span>
+                        <span class="feature-tag">Security Check</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Check Protocols</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- HTTP Headers Checker -->
+                        <div class="tool-card" onclick="showTool('http-headers-checker')">
+                    <div class="tool-icon">📊</div>
+                    <h3 class="tool-title">HTTP Headers Checker</h3>
+                    <p class="tool-description">Analyze security headers</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">HSTS</span>
+                        <span class="feature-tag">CSP</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Check Headers</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- OCSP/CRL Checker -->
+                        <div class="tool-card" onclick="showTool('ocsp-crl-checker')">
+                    <div class="tool-icon">🔍</div>
+                    <h3 class="tool-title">OCSP/CRL Checker</h3>
+                    <p class="tool-description">Check certificate revocation status</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">OCSP</span>
+                        <span class="feature-tag">CRL</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Check Revocation</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- IP to Hostname SSL -->
+                        <div class="tool-card" onclick="showTool('ip-to-hostname-ssl')">
+                    <div class="tool-icon">🌐</div>
+                    <h3 class="tool-title">IP to Hostname SSL</h3>
+                    <p class="tool-description">Get hostname from IP SSL certificate</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Reverse Lookup</span>
+                        <span class="feature-tag">SSL Info</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Check IP SSL</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- Hostname from SSL -->
+                        <div class="tool-card" onclick="showTool('hostname-from-ssl')">
+                    <div class="tool-icon">🏷️</div>
+                    <h3 class="tool-title">Hostname from SSL</h3>
+                    <p class="tool-description">Extract hostnames from SSL certificates</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">CN Extract</span>
+                        <span class="feature-tag">SAN List</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Extract Hostnames</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+
+                <!-- Website Trust Logo Embed -->
+                        <div class="tool-card" onclick="showTool('website-trust-logo')">
+                    <div class="tool-icon">🏆</div>
+                    <h3 class="tool-title">Website Trust Logo</h3>
+                    <p class="tool-description">Generate SSL trust badges for websites</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Custom Design</span>
+                        <span class="feature-tag">Embed Code</span>
+                    </div>
+                            <div class="tool-link">
+                        <span>Create Badge</span>
+                        <span class="link-arrow">→</span>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="gradient-text">Why Choose SSL Checker Pro?</span>
+                </h2>
+                <p class="section-description">
+                    Professional-grade SSL tools trusted by developers and security professionals worldwide
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Lightning Fast</h3>
+                            <p class="feature-description">Get instant results with our optimized SSL checking algorithms and real-time analysis</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">100% Secure</h3>
+                            <p class="feature-description">All checks are performed securely without storing your data or compromising privacy</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Mobile Friendly</h3>
+                            <p class="feature-description">Works perfectly on all devices and screen sizes with responsive design</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🆓</div>
+                    <h3 class="feature-title">Completely Free</h3>
+                            <p class="feature-description">All 20+ tools are free to use with no limitations or hidden costs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Accurate Results</h3>
+                            <p class="feature-description">Comprehensive analysis with detailed technical information and expert insights</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3 class="feature-title">Global Access</h3>
+                            <p class="feature-description">Available 24/7 from anywhere in the world with reliable uptime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        </div>
+
+        <!-- SSL CHECKER TOOL PAGE -->
+        <div id="ssl-checker" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">
+                    ← Back to Tools
+                </div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title">
+                        <span class="gradient-text">SSL Certificate Checker</span>
+                    </h1>
+                    <p class="tool-page-description">
+                        Comprehensive SSL certificate validation and analysis. Check certificate details, 
+                        expiration dates, chain validation, and security configurations.
+                    </p>
+                </div>
+                
+                <div class="tool-interface">
+                    <form id="sslCheckerForm">
+                        <div class="form-group">
+                            <label class="form-label" for="hostname">Hostname or URL</label>
+                            <input type="text" 
+                                   id="hostname" 
+                                   class="form-input" 
+                                   placeholder="Enter hostname (e.g., example.com)" 
+                                   required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="port">Port (Optional)</label>
+                            <input type="number" 
+                                   id="port" 
+                                   class="form-input" 
+                                   placeholder="443" 
+                                   value="443"
+                                   min="1" 
+                                   max="65535">
+                        </div>
+                        <button type="submit" class="submit-btn" id="checkSslBtn">
+                            <span id="btnText">Check SSL Certificate</span>
+                            <span id="btnLoading" class="loading" style="display: none;"></span>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="sslResults" class="results-section" style="display: none;">
+                    <h3 class="results-title">SSL Certificate Results</h3>
+                    <div id="sslResultsContent"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CSR GENERATOR TOOL PAGE -->
+        <div id="csr-generator" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">
+                    ← Back to Tools
+                </div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title">
+                        <span class="gradient-text">CSR Generator</span>
+                    </h1>
+                    <p class="tool-page-description">
+                        Generate Certificate Signing Requests (CSR) with private keys. 
+                        Support for multiple domains and Subject Alternative Names (SANs).
+                    </p>
+                </div>
+                
+                <div class="tool-interface">
+                    <form id="csrGeneratorForm">
+                        <div class="form-group">
+                            <label class="form-label" for="commonName">Common Name (CN)</label>
+                            <input type="text" 
+                                   id="commonName" 
+                                   class="form-input" 
+                                   placeholder="example.com" 
+                                   required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="organization">Organization</label>
+                            <input type="text" 
+                                   id="organization" 
+                                   class="form-input" 
+                                   placeholder="Your Company Name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="organizationalUnit">Organizational Unit</label>
+                            <input type="text" 
+                                   id="organizationalUnit" 
+                                   class="form-input" 
+                                   placeholder="IT Department">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="city">City/Locality</label>
+                            <input type="text" 
+                                   id="city" 
+                                   class="form-input" 
+                                   placeholder="New York">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="state">State/Province</label>
+                            <input type="text" 
+                                   id="state" 
+                                   class="form-input" 
+                                   placeholder="NY">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="country">Country Code</label>
+                            <input type="text" 
+                                   id="country" 
+                                   class="form-input" 
+                                   placeholder="US" 
+                                   maxlength="2">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="keySize">Key Size</label>
+                            <select id="keySize" class="form-select">
+                                <option value="2048">2048 bits</option>
+                                <option value="4096">4096 bits</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="sanList">Subject Alternative Names (Optional)</label>
+                            <textarea id="sanList" 
+                                     class="form-input form-textarea" 
+                                     placeholder="www.example.com&#10;mail.example.com&#10;ftp.example.com"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" id="generateCsrBtn">
+                            <span id="csrBtnText">Generate CSR & Private Key</span>
+                            <span id="csrBtnLoading" class="loading" style="display: none;"></span>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="csrResults" class="results-section" style="display: none;">
+                    <h3 class="results-title">Generated CSR & Private Key</h3>
+                    <div id="csrResultsContent"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Tool Pages (Simplified for now - will be expanded) -->
+        <div id="ssl-expiry-checker" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">SSL Expiry Checker</span></h1>
+                    <p class="tool-page-description">Monitor SSL certificate expiration dates and get alerts before they expire.</p>
+                </div>
+                <div class="tool-interface">
+                    <form id="expiryCheckerForm">
+                        <div class="form-group">
+                            <label class="form-label">Website URLs (one per line)</label>
+                            <textarea class="form-input form-textarea" placeholder="example.com&#10;google.com&#10;github.com" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Check Expiry Dates</button>
+                    </form>
+                </div>
+                <div class="results-section" style="display: none;">
+                    <h3 class="results-title">Expiry Check Results</h3>
+                    <div class="result-item">
+                        <div class="result-label">Results will appear here</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="certificate-decoder" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">Certificate Decoder</span></h1>
+                    <p class="tool-page-description">Decode and analyze X.509 certificates in PEM or DER format.</p>
+                </div>
+                <div class="tool-interface">
+                    <form id="certificateDecoderForm">
+                        <div class="form-group">
+                            <label class="form-label">Certificate (PEM or DER format)</label>
+                            <textarea class="form-input form-textarea" placeholder="-----BEGIN CERTIFICATE-----&#10;...&#10;-----END CERTIFICATE-----" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Decode Certificate</button>
+                    </form>
+                </div>
+                <div class="results-section" style="display: none;">
+                    <h3 class="results-title">Decoded Certificate</h3>
+                    <div class="result-item">
+                        <div class="result-label">Certificate details will appear here</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Placeholder pages for other tools -->
+        <div id="csr-decoder" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">CSR Decoder</span></h1>
+                    <p class="tool-page-description">Decode Certificate Signing Requests and view their details.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="private-key-matcher" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">Private Key Matcher</span></h1>
+                    <p class="tool-page-description">Verify that certificate and private key pairs match.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="domain-expiry-checker" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">Domain Expiry Checker</span></h1>
+                    <p class="tool-page-description">Check domain registration expiration dates and WHOIS information.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="https-redirect-checker" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">HTTPS Redirect Checker</span></h1>
+                    <p class="tool-page-description">Verify HTTP to HTTPS redirects and analyze redirect chains.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="port-443-test" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">Port 443 Test</span></h1>
+                    <p class="tool-page-description">Test SSL port connectivity and response times.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="certificate-fingerprint" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">Certificate Fingerprint</span></h1>
+                    <p class="tool-page-description">Generate SHA256, SHA1, and MD5 fingerprints for certificates.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="ssl-chain-checker" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">SSL Chain Checker</span></h1>
+                    <p class="tool-page-description">Validate SSL certificate chains and root CA verification.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="ssl-vulnerability-scanner" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">SSL Vulnerability Scanner</span></h1>
+                    <p class="tool-page-description">Scan for SSL/TLS vulnerabilities and security issues.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="certificate-san-checker" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">Certificate SAN Checker</span></h1>
+                    <p class="tool-page-description">Check Subject Alternative Names and wildcard certificates.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="pem-to-der-converter" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">PEM to DER Converter</span></h1>
+                    <p class="tool-page-description">Convert PEM certificates to DER format.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="der-to-pem-converter" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">DER to PEM Converter</span></h1>
+                    <p class="tool-page-description">Convert DER certificates to PEM format.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="pfx-to-pem-converter" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">PFX to PEM Converter</span></h1>
+                    <p class="tool-page-description">Extract certificates from PFX files with password support.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="ssl-protocol-support" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">SSL Protocol Support</span></h1>
+                    <p class="tool-page-description">Check supported SSL/TLS protocols and security versions.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="http-headers-checker" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">HTTP Headers Checker</span></h1>
+                    <p class="tool-page-description">Analyze security headers like HSTS, CSP, and more.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="ocsp-crl-checker" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">OCSP/CRL Checker</span></h1>
+                    <p class="tool-page-description">Check certificate revocation status via OCSP and CRL.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="ip-to-hostname-ssl" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">IP to Hostname SSL</span></h1>
+                    <p class="tool-page-description">Get hostname from IP address SSL certificate.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="hostname-from-ssl" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">Hostname from SSL</span></h1>
+                    <p class="tool-page-description">Extract hostnames from SSL certificates.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="website-trust-logo" class="page tool-page">
+            <div class="container">
+                <div class="back-btn" onclick="showPage('home')">← Back to Tools</div>
+                <div class="tool-header">
+                    <h1 class="tool-page-title"><span class="gradient-text">Website Trust Logo</span></h1>
+                    <p class="tool-page-description">Generate SSL trust badges for your websites.</p>
+                </div>
+                <div class="tool-interface">
+                    <p style="text-align: center; color: var(--text-muted);">Tool interface will be implemented here</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Load Header and Footer -->
+    <script>
+        // Load header
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        // Load footer
+        fetch('includes/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>
+

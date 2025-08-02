@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title - SSL Checker Pro</title>
+    <meta name="description" content="Page description here">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Your page content goes here -->
+            <div class="tool-header">
+                <h1 class="tool-page-title">
+                    <span class="gradient-text">Page Title</span>
+                </h1>
+                <p class="tool-page-description">
+                    Page description goes here
+                </p>
+            </div>
+            
+            <div class="tool-interface">
+                <!-- Your form or content goes here -->
+                <p>Your content here...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Load Header and Footer -->
+    <script>
+        // Load header
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        // Load footer
+        fetch('includes/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html> 

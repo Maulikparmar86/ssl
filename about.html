@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SSL Checker Pro</title>
+    <meta name="description" content="Learn about our SSL certificate checking tools and services">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+    
+    <main class="main-content">
+        <div class="container">
+            <div class="back-btn" onclick="window.location.href='index.html'">
+                ← Back to Home
+            </div>
+            
+            <div class="tool-header">
+                <h1 class="tool-page-title">
+                    <span class="gradient-text">About SSL Checker Pro</span>
+                </h1>
+                <p class="tool-page-description">
+                    Learn about our SSL certificate checking tools and services
+                </p>
+            </div>
+            
+            <div class="tool-interface">
+                <div class="about-content">
+                    <p>Welcome to SSL Checker Pro, your comprehensive toolkit for SSL certificate management and security analysis.</p>
+                    
+                    <h2>Our Mission</h2>
+                    <p>We aim to provide the most reliable and user-friendly SSL certificate tools to help website owners and developers ensure their online security.</p>
+                    
+                    <h2>What We Offer</h2>
+                    <ul>
+                        <li>Comprehensive SSL certificate analysis</li>
+                        <li>CSR generation and verification</li>
+                        <li>Security vulnerability scanning</li>
+                        <li>SSL configuration optimization</li>
+                        <li>Certificate format conversion</li>
+                        <li>Domain and SSL expiry monitoring</li>
+                    </ul>
+                    
+                    <h2>Why Choose Us</h2>
+                    <ul>
+                        <li>Professional-grade tools trusted by developers worldwide</li>
+                        <li>100% free with no limitations</li>
+                        <li>Real-time SSL certificate analysis</li>
+                        <li>Comprehensive security scanning</li>
+                        <li>User-friendly interface</li>
+                        <li>24/7 availability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Load JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Load Header and Footer -->
+    <script>
+        // Load header
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        // Load footer
+        fetch('includes/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
